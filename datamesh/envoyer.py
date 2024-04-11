@@ -68,13 +68,13 @@ class Envoyer:
         if not data_source:
             raise ValueError(f"Data source {source_name} not registered.")
 
-        fetch_response = data_source.fetch_data(**kwargs)
+        fetched_data = data_source.fetch_data(**kwargs)
         
         if save_to_db and collection_name:
-            data_source.save_data(collection_name, fetch_response)
+            data_source.save_data(collection_name, fetched_data)
 
 
-        self.fetch_response = fetch_response
+        self.fetched_data = fetched_data
 
         return self
         
