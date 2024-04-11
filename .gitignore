@@ -1,7 +1,6 @@
-
-
 #data files
 *.duckdb
+*.duckdb.*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
