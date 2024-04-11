@@ -4,7 +4,7 @@ import datetime
 
 class TimeSeriesData(BaseModel):
     timestamp: datetime.datetime
-    source: str
+    source_id: str
     series_id: str
     year: int
     month: int

@@ -97,7 +97,7 @@ class Envoyer:
 
     def to_format(self, format):
 
-        data = self.fetch_response
+        data = self.fetched_data
 
         transformer = DataTransformerFactory.create_transformer(format)
         return transformer.transform(data)
