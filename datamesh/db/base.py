@@ -11,5 +11,9 @@ class DatabaseUtility(ABC):
         pass
 
     @abstractmethod
+    def create_table_if_not_exists(self):
+        pass
+
+    @abstractmethod
     def upsert_time_series_data(self, data):
         pass

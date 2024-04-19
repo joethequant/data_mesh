@@ -24,8 +24,6 @@ class FredDataSource(BaseDataSource):
 
         raw_data = response.json()['observations']
 
-        print(raw_data)
-
         data_points = [
             TimeSeriesData(timestamp=datetime.datetime.strptime(obs['date'], '%Y-%m-%d'),
                            source_id=self.source_id,
